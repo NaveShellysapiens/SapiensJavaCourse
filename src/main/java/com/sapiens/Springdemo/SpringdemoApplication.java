@@ -1,5 +1,6 @@
 package com.sapiens.Springdemo;
-import com.sapiens.Springdemo.di.ConstructorBasedDI;
+//import com.sapiens.Springdemo.di.ConstructorBasedDI;
+import com.sapiens.Springdemo.di.SetterBasedDI;
 import com.sapiens.Springdemo.ioc.Address;
 import com.sapiens.Springdemo.ioc.Contact;
 import com.sapiens.Springdemo.ioc.Employee;
@@ -15,13 +16,18 @@ public class SpringdemoApplication {
 
 	public static void main(String[] args) {
 
-		SpringApplication.run(SpringdemoApplication.class, args);
-		// Task 2.1 constructorBasedDI
-		System.out.println("Constructor Based DI");
-		AnnotationConfigApplicationContext context2 = new AnnotationConfigApplicationContext(ConstructorBasedDI.class);
-        ConstructorBasedDI.AccountServiceClient bean = context2.getBean(ConstructorBasedDI.AccountServiceClient.class);
-		bean.showAccountDetails();
+//		SpringApplication.run(SpringdemoApplication.class, args);
+//		// Task 2.1 constructorBasedDI
+//		System.out.println("Constructor Based DI");
+//		AnnotationConfigApplicationContext context2 = new AnnotationConfigApplicationContext(ConstructorBasedDI.class);
+//        ConstructorBasedDI.AccountServiceClient bean = context2.getBean(ConstructorBasedDI.AccountServiceClient.class);
+//		bean.showAccountDetails();
 		// Task 2.2 setterBasedDI
+		System.out.println("Setter based ");
+		AnnotationConfigApplicationContext configApplicationContext1 = new AnnotationConfigApplicationContext(SetterBasedDI.class);
+		SetterBasedDI.AccountServiceClient accountServiceClient = configApplicationContext1.getBean(SetterBasedDI.AccountServiceClient.class);
+		accountServiceClient.ShowAccountDetails();
+
 
 
 
