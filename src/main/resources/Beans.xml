@@ -112,4 +112,32 @@
         <property name="years_of_experience" value="33"/>
         <property name="current_company_name" value="EXmcomp12"/>
     </bean>
+
+    <bean id="activeMqMessaging" class="com.sapiens.Springdemo.setterDI.ActiveMQMessaging" />
+    <bean id="UniqueMQMessaging" class="com.sapiens.Springdemo.setterDI.UniqueMQMessaging" />
+    <bean id="StaticMQMessaging" class="com.sapiens.Springdemo.setterDI.StaticMQMessaging" />
+    <bean id="DynamicMQMessaging" class="com.sapiens.Springdemo.setterDI.DynamicMQMessaging" />
+
+
+    <bean id="communication1" class="com.sapiens.Springdemo.setterDI.Communication">
+        <property name="messaging">
+            <ref bean="activeMqMessaging" />
+        </property>
+    </bean>
+    <bean id="communication2" class="com.sapiens.Springdemo.setterDI.Communication">
+        <property name="messaging">
+            <ref bean="UniqueMQMessaging" />
+        </property>
+    </bean>
+    <bean id="communication3" class="com.sapiens.Springdemo.setterDI.Communication">
+        <property name="messaging">
+            <ref bean="StaticMQMessaging" />
+        </property>
+    </bean>
+    <bean id="communication4" class="com.sapiens.Springdemo.setterDI.Communication">
+        <property name="messaging">
+            <ref bean="DynamicMQMessaging" />
+        </property>
+    </bean>
+
 </beans>

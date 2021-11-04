@@ -1,4 +1,4 @@
-package com.sapiens.Springdemo.test;
+package com.sapiens.Springdemo.ElectricBulb;
 
 public interface Switch {
     boolean isOn();
