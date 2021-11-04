@@ -119,24 +119,9 @@
     <bean id="DynamicMQMessaging" class="com.sapiens.Springdemo.setterDI.DynamicMQMessaging" />
 
 
-    <bean id="communication1" class="com.sapiens.Springdemo.setterDI.Communication">
+    <bean id="communication" class="com.sapiens.Springdemo.setterDI.Communication">
         <property name="messaging">
             <ref bean="activeMqMessaging" />
-        </property>
-    </bean>
-    <bean id="communication2" class="com.sapiens.Springdemo.setterDI.Communication">
-        <property name="messaging">
-            <ref bean="UniqueMQMessaging" />
-        </property>
-    </bean>
-    <bean id="communication3" class="com.sapiens.Springdemo.setterDI.Communication">
-        <property name="messaging">
-            <ref bean="StaticMQMessaging" />
-        </property>
-    </bean>
-    <bean id="communication4" class="com.sapiens.Springdemo.setterDI.Communication">
-        <property name="messaging">
-            <ref bean="DynamicMQMessaging" />
         </property>
     </bean>
 
