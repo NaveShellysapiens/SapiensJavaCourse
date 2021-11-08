@@ -1,129 +1,148 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xmlns:context="http://www.springframework.org/schema/context"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans
-       http://www.springframework.org/schema/beans/spring-beans-3.0.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
-    <bean id ="Employee1" class="com.sapiens.Springdemo.ioc.Employee">
-        <property name="ID" value="1"/>
-        <property name="Name" value="E1"/>
-        <property name="Age" value="25"/>
-        <property name="Gender" value="Male"/>
-    </bean>
-    <bean id ="Employee2" class="com.sapiens.Springdemo.ioc.Employee">
-        <property name="ID" value="2"/>
-        <property name="Name" value="E2"/>
-        <property name="Age" value="25"/>
-        <property name="Gender" value="Female"/>
-    </bean>
-    <bean id ="Employee3" class="com.sapiens.Springdemo.ioc.Employee">
-        <property name="ID" value="3"/>
-        <property name="Name" value="E3"/>
-        <property name="Age" value="25"/>
-        <property name="Gender" value="Male"/>
-    </bean>
-    <bean id ="Employee4" class="com.sapiens.Springdemo.ioc.Employee">
-        <property name="ID" value="4"/>
-        <property name="Name" value="E4"/>
-        <property name="Age" value="25"/>
-        <property name="Gender" value="Female"/>
-    </bean>
-    <bean id ="Address1" class="com.sapiens.Springdemo.ioc.Address">
-        <property name="City" value="Beer Sheva"/>
-        <property name="State" value="Darom"/>
-        <property name="country" value="IL"/>
-        <property name="pincode" value="2134"/>
-        <property name="PO_BOX_NUMBER" value="12"/>
-    </bean>
-    <bean id ="Address2" class="com.sapiens.Springdemo.ioc.Address">
-        <property name="City" value="Beer Sheva"/>
-        <property name="State" value="Darom"/>
-        <property name="country" value="IL"/>
-        <property name="pincode" value="213324"/>
-        <property name="PO_BOX_NUMBER" value="1212"/>
-    </bean>
-    <bean id ="Address3" class="com.sapiens.Springdemo.ioc.Address">
-        <property name="City" value="Beer Sheva"/>
-        <property name="State" value="Darom"/>
-        <property name="country" value="IL"/>
-        <property name="pincode" value="21344"/>
-        <property name="PO_BOX_NUMBER" value="122"/>
-    </bean>
-    <bean id ="Address4" class="com.sapiens.Springdemo.ioc.Address">
-        <property name="City" value="Beer Sheva"/>
-        <property name="State" value="Darom"/>
-        <property name="country" value="IL"/>
-        <property name="pincode" value="21342"/>
-        <property name="PO_BOX_NUMBER" value="123"/>
-    </bean>
-    <bean id ="Contact1" class="com.sapiens.Springdemo.ioc.Contact">
-        <property name="primary_Mobile_no" value="123"/>
-        <property name="Secondary_Mobile_no" value="321"/>
-        <property name="emergency_Contact_no" value="Emp2"/>
-        <property name="email_id" value="123@bla.com"/>
-        <property name="Official_mail_id" value="123@bla12.com"/>
-    </bean>
-    <bean id ="Contact2" class="com.sapiens.Springdemo.ioc.Contact">
-        <property name="primary_Mobile_no" value="1234"/>
-        <property name="Secondary_Mobile_no" value="3213"/>
-        <property name="emergency_Contact_no" value="Emp3"/>
-        <property name="email_id" value="1223@bla.com"/>
-        <property name="Official_mail_id" value="1231@bla12.com"/>
-    </bean>
-    <bean id ="Contact3" class="com.sapiens.Springdemo.ioc.Contact">
-        <property name="primary_Mobile_no" value="12323"/>
-        <property name="Secondary_Mobile_no" value="32123"/>
-        <property name="emergency_Contact_no" value="Emp3"/>
-        <property name="email_id" value="112323@bla.com"/>
-        <property name="Official_mail_id" value="121233@bla12.com"/>
-    </bean>
-    <bean id ="Contact4" class="com.sapiens.Springdemo.ioc.Contact">
-        <property name="primary_Mobile_no" value="123423"/>
-        <property name="Secondary_Mobile_no" value="323421"/>
-        <property name="emergency_Contact_no" value="Emp4"/>
-        <property name="email_id" value="1223233@bla.com"/>
-        <property name="Official_mail_id" value="1212313@bla12.com"/>
-    </bean>
-    <bean id ="OD1" class="com.sapiens.Springdemo.ioc.Official_Details">
-        <property name="edu_qualification" value="exm1"/>
-        <property name="percentage" value="10"/>
-        <property name="Designation" value="exm2"/>
-        <property name="years_of_experience" value="3"/>
-        <property name="current_company_name" value="EXmcomp"/>
-    </bean>
-    <bean id ="OD2" class="com.sapiens.Springdemo.ioc.Official_Details">
-        <property name="edu_qualification" value="exm1"/>
-        <property name="percentage" value="10"/>
-        <property name="Designation" value="exm2"/>
-        <property name="years_of_experience" value="13"/>
-        <property name="current_company_name" value="EXmcomp321"/>
-    </bean>
-    <bean id ="OD3" class="com.sapiens.Springdemo.ioc.Official_Details">
-        <property name="edu_qualification" value="exm1"/>
-        <property name="percentage" value="10"/>
-        <property name="Designation" value="exm2"/>
-        <property name="years_of_experience" value="32"/>
-        <property name="current_company_name" value="EXmcomp12"/>
-    </bean>
-    <bean id ="OD4" class="com.sapiens.Springdemo.ioc.Official_Details">
-        <property name="edu_qualification" value="exm1"/>
-        <property name="percentage" value="10"/>
-        <property name="Designation" value="exm2"/>
-        <property name="years_of_experience" value="33"/>
-        <property name="current_company_name" value="EXmcomp12"/>
-    </bean>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util" xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/tx https://www.springframework.org/tx/spring-tx.xsd ">
+<!--    <bean id="Employee1" class="com.sapiens.Springdemo.ioc.Employee">-->
+<!--        <property name="ID" value="1"/>-->
+<!--        <property name="Name" value="E1"/>-->
+<!--        <property name="Age" value="25"/>-->
+<!--        <property name="Gender" value="Male"/>-->
+<!--    </bean>-->
+<!--    <bean id="Employee2" class="com.sapiens.Springdemo.ioc.Employee">-->
+<!--        <property name="ID" value="2"/>-->
+<!--        <property name="Name" value="E2"/>-->
+<!--        <property name="Age" value="25"/>-->
+<!--        <property name="Gender" value="Female"/>-->
+<!--    </bean>-->
+<!--    <bean id="Employee3" class="com.sapiens.Springdemo.ioc.Employee">-->
+<!--        <property name="ID" value="3"/>-->
+<!--        <property name="Name" value="E3"/>-->
+<!--        <property name="Age" value="25"/>-->
+<!--        <property name="Gender" value="Male"/>-->
+<!--    </bean>-->
+<!--    <bean id="Employee4" class="com.sapiens.Springdemo.ioc.Employee">-->
+<!--        <property name="ID" value="4"/>-->
+<!--        <property name="Name" value="E4"/>-->
+<!--        <property name="Age" value="25"/>-->
+<!--        <property name="Gender" value="Female"/>-->
+<!--    </bean>-->
+<!--    <bean id="Address1" class="com.sapiens.Springdemo.ioc.Address">-->
+<!--        <property name="City" value="Beer Sheva"/>-->
+<!--        <property name="State" value="Darom"/>-->
+<!--        <property name="country" value="IL"/>-->
+<!--        <property name="pincode" value="2134"/>-->
+<!--        <property name="PO_BOX_NUMBER" value="12"/>-->
+<!--    </bean>-->
+<!--    <bean id="Address2" class="com.sapiens.Springdemo.ioc.Address">-->
+<!--        <property name="City" value="Beer Sheva"/>-->
+<!--        <property name="State" value="Darom"/>-->
+<!--        <property name="country" value="IL"/>-->
+<!--        <property name="pincode" value="213324"/>-->
+<!--        <property name="PO_BOX_NUMBER" value="1212"/>-->
+<!--    </bean>-->
+<!--    <bean id="Address3" class="com.sapiens.Springdemo.ioc.Address">-->
+<!--        <property name="City" value="Beer Sheva"/>-->
+<!--        <property name="State" value="Darom"/>-->
+<!--        <property name="country" value="IL"/>-->
+<!--        <property name="pincode" value="21344"/>-->
+<!--        <property name="PO_BOX_NUMBER" value="122"/>-->
+<!--    </bean>-->
+<!--    <bean id="Address4" class="com.sapiens.Springdemo.ioc.Address">-->
+<!--        <property name="City" value="Beer Sheva"/>-->
+<!--        <property name="State" value="Darom"/>-->
+<!--        <property name="country" value="IL"/>-->
+<!--        <property name="pincode" value="21342"/>-->
+<!--        <property name="PO_BOX_NUMBER" value="123"/>-->
+<!--    </bean>-->
+<!--    <bean id="Contact1" class="com.sapiens.Springdemo.ioc.Contact">-->
+<!--        <property name="primary_Mobile_no" value="123"/>-->
+<!--        <property name="Secondary_Mobile_no" value="321"/>-->
+<!--        <property name="emergency_Contact_no" value="Emp2"/>-->
+<!--        <property name="email_id" value="123@bla.com"/>-->
+<!--        <property name="Official_mail_id" value="123@bla12.com"/>-->
+<!--    </bean>-->
+<!--    <bean id="Contact2" class="com.sapiens.Springdemo.ioc.Contact">-->
+<!--        <property name="primary_Mobile_no" value="1234"/>-->
+<!--        <property name="Secondary_Mobile_no" value="3213"/>-->
+<!--        <property name="emergency_Contact_no" value="Emp3"/>-->
+<!--        <property name="email_id" value="1223@bla.com"/>-->
+<!--        <property name="Official_mail_id" value="1231@bla12.com"/>-->
+<!--    </bean>-->
+<!--    <bean id="Contact3" class="com.sapiens.Springdemo.ioc.Contact">-->
+<!--        <property name="primary_Mobile_no" value="12323"/>-->
+<!--        <property name="Secondary_Mobile_no" value="32123"/>-->
+<!--        <property name="emergency_Contact_no" value="Emp3"/>-->
+<!--        <property name="email_id" value="112323@bla.com"/>-->
+<!--        <property name="Official_mail_id" value="121233@bla12.com"/>-->
+<!--    </bean>-->
+<!--    <bean id="Contact4" class="com.sapiens.Springdemo.ioc.Contact">-->
+<!--        <property name="primary_Mobile_no" value="123423"/>-->
+<!--        <property name="Secondary_Mobile_no" value="323421"/>-->
+<!--        <property name="emergency_Contact_no" value="Emp4"/>-->
+<!--        <property name="email_id" value="1223233@bla.com"/>-->
+<!--        <property name="Official_mail_id" value="1212313@bla12.com"/>-->
+<!--    </bean>-->
+<!--    <bean id="OD1" class="com.sapiens.Springdemo.ioc.Official_Details">-->
+<!--        <property name="edu_qualification" value="exm1"/>-->
+<!--        <property name="percentage" value="10"/>-->
+<!--        <property name="Designation" value="exm2"/>-->
+<!--        <property name="years_of_experience" value="3"/>-->
+<!--        <property name="current_company_name" value="EXmcomp"/>-->
+<!--    </bean>-->
+<!--    <bean id="OD2" class="com.sapiens.Springdemo.ioc.Official_Details">-->
+<!--        <property name="edu_qualification" value="exm1"/>-->
+<!--        <property name="percentage" value="10"/>-->
+<!--        <property name="Designation" value="exm2"/>-->
+<!--        <property name="years_of_experience" value="13"/>-->
+<!--        <property name="current_company_name" value="EXmcomp321"/>-->
+<!--    </bean>-->
+<!--    <bean id="OD3" class="com.sapiens.Springdemo.ioc.Official_Details">-->
+<!--        <property name="edu_qualification" value="exm1"/>-->
+<!--        <property name="percentage" value="10"/>-->
+<!--        <property name="Designation" value="exm2"/>-->
+<!--        <property name="years_of_experience" value="32"/>-->
+<!--        <property name="current_company_name" value="EXmcomp12"/>-->
+<!--    </bean>-->
+<!--    <bean id="OD4" class="com.sapiens.Springdemo.ioc.Official_Details">-->
+<!--        <property name="edu_qualification" value="exm1"/>-->
+<!--        <property name="percentage" value="10"/>-->
+<!--        <property name="Designation" value="exm2"/>-->
+<!--        <property name="years_of_experience" value="33"/>-->
+<!--        <property name="current_company_name" value="EXmcomp12"/>-->
+<!--    </bean>-->
 
-    <bean id="activeMqMessaging" class="com.sapiens.Springdemo.setterDI.ActiveMQMessaging" />
-    <bean id="UniqueMQMessaging" class="com.sapiens.Springdemo.setterDI.UniqueMQMessaging" />
-    <bean id="StaticMQMessaging" class="com.sapiens.Springdemo.setterDI.StaticMQMessaging" />
-    <bean id="DynamicMQMessaging" class="com.sapiens.Springdemo.setterDI.DynamicMQMessaging" />
+<!--    <bean id="activeMqMessaging" class="com.sapiens.Springdemo.setterDI.ActiveMQMessaging"/>-->
+<!--    <bean id="UniqueMQMessaging" class="com.sapiens.Springdemo.setterDI.UniqueMQMessaging"/>-->
+<!--    <bean id="StaticMQMessaging" class="com.sapiens.Springdemo.setterDI.StaticMQMessaging"/>-->
+<!--    <bean id="DynamicMQMessaging" class="com.sapiens.Springdemo.setterDI.DynamicMQMessaging"/>-->
 
 
-    <bean id="communication" class="com.sapiens.Springdemo.setterDI.Communication">
-        <property name="messaging">
-            <ref bean="activeMqMessaging" />
-        </property>
+<!--    <bean id="communication" class="com.sapiens.Springdemo.setterDI.Communication">-->
+<!--        <property name="messaging">-->
+<!--            <ref bean="activeMqMessaging"/>-->
+<!--        </property>-->
+<!--    </bean>-->
+<!--    <context:component-scan base-package="com.sapiens.Springdemo.DAO"/>-->
+
+    <tx:annotation-driven transaction-manager="txnManagerBean" proxy-target-class="true"/>
+    <bean id="EmployeeDAOBean" class="com.sapiens.Springdemo.ProgramaticTM.EmployeeDAO">
+        <property name="jdbcTemplate" ref="jdbcTemplateBean"/>
+        <property name="transactionTemplate" ref="transactionTemplateBean"/>
     </bean>
-    <context:component-scan base-package="com.sapiens.Springdemo.DAO"/>
+    <bean id="jdbcTemplateBean" class="org.springframework.jdbc.core.JdbcTemplate">
+        <property name="dataSource" ref="dataSourceBean"/>
+    </bean>
+    <bean id="transactionTemplateBean" class="org.springframework.transaction.support.TransactionTemplate">
+        <property name="transactionManager" ref="txnManagerBean"/>
+    </bean>
+    <bean id="txnManagerBean" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSourceBean"/>
+    </bean>
+    <bean id="dataSourceBean" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="com.mysql.cj.jdbc.Driver"/>
+        <property name="url" value="jdbc:mysql://localhost:3306/jdbcdemo?createDatabaseIfNotExist=TRUE"/>
+        <property name="username" value="root"/>
+        <property name="password" value="root"/>
+    </bean>
 </beans>
