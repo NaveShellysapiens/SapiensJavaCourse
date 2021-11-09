@@ -12,16 +12,14 @@ public class DBConnection {
         // Task 1 Write a JDBC program to establish and check for the DB connection.
 
         Class.forName("com.mysql.cj.jdbc.Driver");
-        System.out.println("Driver Connected");
+        System.out.println("Driver Connewcted");
 
         //Task 2 Write a JDBC program to create a DB named Employee.
 
-        Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/employee?createDatabaseIfNotExist=TRUE", "root", "root");
+        Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/jpmg?createDatabaseIfNotExist=TRUE", "root", "root");
         System.out.println("Connection Established Successfully");
         Statement statement = connection.createStatement();
         Scanner s_name = new Scanner(System.in);
-
-
         System.out.println("For task 3-7 press 1");
         System.out.println("For crud app press 2");
         int prog =s_name.nextInt();
