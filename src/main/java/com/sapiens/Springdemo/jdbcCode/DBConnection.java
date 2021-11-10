@@ -12,7 +12,7 @@ public class DBConnection {
         // Task 1 Write a JDBC program to establish and check for the DB connection.
 
         Class.forName("com.mysql.cj.jdbc.Driver");
-        System.out.println("Driver Connewcted");
+        System.out.println("Driver Connected");
 
         //Task 2 Write a JDBC program to create a DB named Employee.
 
@@ -28,9 +28,9 @@ public class DBConnection {
                 //Task 3 Write a JDBC program to create a table named EmployeeDetails with
                 // ID, NAME, AGE, DEPT, DESIG, QUALIFICATION, EMAIL ID, CONTACT, SALARY, TOTAL YEARS OF EXP. Also create few other tables for future purpose.
 
-                String sql = "CREATE TABLE EmployeeDetails (ID INT, NAME VARCHAR(20),AGE INT, DEPT VARCHAR(20), DESIG VARCHAR(20),QUALIFICATION VARCHAR(20),Email VARCHAR(20),CONTACT VARCHAR(20),SALARY INT,TOTAL_YEARS_OF_EXP INT, PRIMARY KEY (ID))";
-                statement.executeUpdate(sql);
-                sql = "CREATE TABLE tables_for_future_purpose (Field1 VARCHAR(20),Field2 VARCHAR(20),Field3 VARCHAR(20),Field4 VARCHAR(20),Field5 VARCHAR(20), PRIMARY KEY (Field1))";
+                //String sql = "CREATE TABLE EmployeeDetails (ID INT, NAME VARCHAR(20),AGE INT, DEPT VARCHAR(20), DESIG VARCHAR(20),QUALIFICATION VARCHAR(20),Email VARCHAR(20),CONTACT VARCHAR(20),SALARY INT,TOTAL_YEARS_OF_EXP INT, PRIMARY KEY (ID))";
+                //statement.executeUpdate(sql);
+                String sql = "CREATE TABLE tables_for_future_purpose (Field1 VARCHAR(20),Field2 VARCHAR(20),Field3 VARCHAR(20),Field4 VARCHAR(20),Field5 VARCHAR(20), PRIMARY KEY (Field1))";
                 statement.executeUpdate(sql);
                 sql = "CREATE TABLE tables_for_future_purpose1 (Field1 VARCHAR(20),Field2 VARCHAR(20),Field3 VARCHAR(20),Field4 VARCHAR(20),Field5 VARCHAR(20), PRIMARY KEY (Field1))";
                 statement.executeUpdate(sql);
