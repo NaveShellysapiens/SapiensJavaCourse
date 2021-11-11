@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Employee</title>
+</head>
+<body>
+<div align = "center">
+    <h1>Edit Employee</h1>
+    <form action="#" th:action = "@{/save}" th:object="${employee}" method="post">
+        <table border="1" cellpadding="10">
+            <tr>
+                <td>Employee ID</td>
+                <td><input type="text" th:field="*{id}" readonly="readonly"/></td>
+            </tr>
+            <tr>
+                <td>Employee First Name</td>
+                <td><input type="text" th:field="*{FirstName}"/></td>
+            </tr>
+            <tr>
+                <td>Employee Last Name</td>
+                <td><input type="text" th:field="*{LastName}"/></td>
+            </tr>
+            <tr>
+                <td>Employee DOB</td>
+                <td><input type="text" th:field="*{DOB}"/></td>
+            </tr>
+            <tr>
+                <td>Employee Desig</td>
+                <td><input type="text" th:field="*{Desig}"/></td>
+            </tr>
+            <tr>
+                <td>Employee Dept</td>
+                <td><input type="text" th:field="*{Dept}"/></td>
+            </tr>
+            <tr>
+                <td>Employee Years Of Experience</td>
+                <td><input type="text" th:field="*{YOE}"/></td>
+            </tr>
+            <tr>
+                <td>Employee Salary</td>
+                <td><input type="text" th:field="*{Salary}"/></td>
+            </tr>
+            <tr>
+                <td colspan="2"><button type="submit">Save </button></td>
+            </tr>
+        </table>
+    </form>
+</div>
+</body>
+</html>
