@@ -1,0 +1,11 @@
+--------------- Employee Data ------------------ 
+ ID: 1 
+ NAME: tre
+ Age:  324
+ DESIG:  bcvb
+ QUALIFICATION:  gfh
+ Email: vbn
+ DEPT: xzcc
+ CONTACT: gf
+ SALARY: 5354
+ TOTAL YEARS OF EXP :1
